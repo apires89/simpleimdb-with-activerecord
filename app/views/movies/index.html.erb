@@ -1,0 +1,14 @@
+<h1>All of the Movies</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+  <li>
+    title: <%= movie.title %>
+    description: <%= movie.description %>
+    year: <%= movie.year %>
+  </li>
+
+  <% end %>
+</ul>
+
+<%= link_to "New Movie", movies_new_path %>
