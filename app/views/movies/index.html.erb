@@ -2,13 +2,13 @@
 
 <ul>
   <% @movies.each do |movie| %>
+  <%= link_to movie_path(movie) do %>
   <li>
-    title: <%= movie.title %>
-    description: <%= movie.description %>
-    year: <%= movie.year %>
+    <%= movie.title %>
   </li>
+  <% end %>
 
   <% end %>
 </ul>
 
-<%= link_to "New Movie", movies_new_path %>
+<%= link_to "New Movie", new_movie_path %>
